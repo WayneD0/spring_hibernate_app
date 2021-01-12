@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "classpath:log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+<!-- 
+<appender name="masters" class="com.ntpl.hralign.log4j.TimeSizeRollingFileAppender">
+	<param name="rootPath" value="D:" />
+	<param name="File" value="${rootPath}/logs/masters.log" />
+	<param name="DatePattern" value="_yyyy-MM-dd'.log'" />
+	<param name="MaxFileSize" value="10MB" />
+	<param name="maxBackupIndex" value="15" />
+	<layout class="org.apache.log4j.PatternLayout"> 
+		<param name="ConversionPattern" value="[%5p] [%d] [%t] [%c] [%M] %m%n"/>
+	</layout>
+</appender>
+<appender name="exceptions" class="com.ntpl.hralign.log4j.TimeSizeRollingFileAppender">
+	<param name="rootPath" value="D:" />
+	<param name="File" value="${rootPath}/logs/exceptions.log" />
+	<param name="DatePattern" value="_yyyy-MM-dd'.log'" />
+	<param name="MaxFileSize" value="10MB" />
+	<param name="maxBackupIndex" value="15" />
+	<layout class="org.apache.log4j.PatternLayout"> 
+		<param name="ConversionPattern" value="[%5p] [%d] [%t] [%c] [%M] %m%n"/>
+	</layout>
+</appender>
+ -->
+<appender name="spr_spersec_db" class="com.tariq.practice.log4j.TimeSizeRollingFileAppender">
+	<param name="rootPath" value="E:" />
+	<param name="File" value="${rootPath}/logs/myProject.log" />
+	<param name="DatePattern" value="_yyyy-MM-dd'.log'" />
+	<param name="MaxFileSize" value="100MB" />
+	<param name="maxBackupIndex" value="15" />
+	<layout class="org.apache.log4j.PatternLayout"> 
+		<param name="ConversionPattern" value="[%5p] [%d] [%t] [%c] [%M] %m%n"/>
+	</layout>
+</appender>
+<!--  
+<logger name="com.ntpl.hralign.masters">
+    <level value="all" />
+    <appender-ref ref="masters" />
+</logger>
+<logger name="com.ntpl.hralign.exception">
+    <level value="all" />
+    <appender-ref ref="exceptions" />
+</logger>
+ -->
+<logger name="com.tariq.practice">
+    <level value="all" />
+    <appender-ref ref="spr_spersec_db" />
+</logger>
+
+</log4j:configuration>
